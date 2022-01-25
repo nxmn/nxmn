@@ -1,0 +1,33 @@
+{
+  "root": "packages/task-runner",
+  "sourceRoot": "packages/task-runner/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/task-runner",
+        "main": "packages/task-runner/src/index.ts",
+        "tsConfig": "packages/task-runner/tsconfig.lib.json",
+        "assets": ["packages/task-runner/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/task-runner/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/task-runner"],
+      "options": {
+        "jestConfig": "packages/task-runner/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

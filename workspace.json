@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "task-runner": "packages/task-runner"
+  }
+}
