@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nxmn/cache-server": ["packages/cache-server/src/index.ts"],
       "@nxmn/task-runner": ["packages/task-runner/src/index.ts"]
     }
   },

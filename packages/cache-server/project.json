@@ -1,17 +1,29 @@
 {
   "root": "packages/cache-server",
   "sourceRoot": "packages/cache-server/src",
-  "projectType": "library",
+  "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/node:build",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/cache-server",
-        "tsConfig": "packages/cache-server/tsconfig.lib.json",
-        "packageJson": "packages/cache-server/package.json",
-        "main": "packages/cache-server/src/index.ts",
-        "assets": ["packages/cache-server/*.md"]
+        "main": "packages/cache-server/src/main.ts",
+        "tsConfig": "packages/cache-server/tsconfig.app.json",
+        "generatePackageJson": true
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "cache-server:build"
       }
     },
     "lint": {
