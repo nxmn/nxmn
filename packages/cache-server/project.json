@@ -15,7 +15,7 @@
       "configurations": {
         "production": {
           "optimization": true,
-          "extractLicenses": true,
+          "extractLicenses": false,
           "inspect": false
         }
       }
@@ -40,6 +40,26 @@
         "jestConfig": "packages/cache-server/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "create-container": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "rm -rf ./dist/containers/cache-server",
+          "mkdir -p ./dist/containers/cache-server",
+          "cp -R ./dist/packages/cache-server ./dist/containers/cache-server/output",
+          "cp ./packages/cache-server/Containerfile ./dist/containers/cache-server/Containerfile",
+          "cd ./dist/containers/cache-server && podman build -f Containerfile -t cache-server:latest ."
+        ],
+        "parallel": false
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "configurations": ["production"],
+          "projects": "self"
+        }
+      ]
     }
   },
   "tags": []

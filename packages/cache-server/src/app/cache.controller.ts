@@ -1,19 +1,19 @@
 import {
   Controller,
   Get,
-  Post,
-  Param,
-  UseInterceptors,
   Head,
-  Res,
   HttpStatus,
-  StreamableFile,
   NotFoundException,
+  Param,
+  Post,
+  Res,
+  StreamableFile,
+  UseInterceptors,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { Response } from 'express';
-import { createReadStream, existsSync } from 'fs';
-import { join } from 'path';
+import type { Response } from 'express';
+import { createReadStream, existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { ConfigService } from './config/config.service';
 
 @Controller('cache')
