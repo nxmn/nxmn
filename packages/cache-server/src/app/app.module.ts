@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { CacheController } from './cache.controller';
 import { MulterModule } from '@nestjs/platform-express';
 import * as multer from 'multer';
+import { CacheController } from './cache.controller';
 import { ConfigModule } from './config/config.module';
 import { ConfigService } from './config/config.service';
 

@@ -1,0 +1,15 @@
+FROM node:lts-alpine
+
+WORKDIR /app
+
+COPY ./output .
+
+ENV PORT=3333
+EXPOSE ${PORT}
+
+ENV NXMN_CACHE_DIR=/app/cache
+VOLUME ${NXMN_CACHE_DIR}
+
+RUN npm install --production
+
+CMD node ./main.js

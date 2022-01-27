@@ -1,6 +1,6 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { join } from 'path';
-import { ensureDirSync } from 'fs-extra';
+import { existsSync, mkdirSync } from 'node:fs';
+import { join } from 'node:path';
 
 @Injectable()
 export class ConfigService implements OnModuleInit {
@@ -9,6 +9,8 @@ export class ConfigService implements OnModuleInit {
   }
 
   onModuleInit(): void {
-    ensureDirSync(this.cacheDir);
+    if (!existsSync(this.cacheDir)) {
+      mkdirSync(this.cacheDir, { recursive: true });
+    }
   }
 }
