@@ -27,6 +27,29 @@
         "jestConfig": "packages/task-runner/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "baseBranch": "main",
+        "push": true,
+        "noVerify": true,
+        "postTargets": ["task-runner:publish", "task-runner:github"],
+        "commitMessageFormat": "chore(${projectName}): release version ${version}"
+      }
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "publish": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

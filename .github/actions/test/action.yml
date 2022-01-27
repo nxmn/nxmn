@@ -1,0 +1,17 @@
+name: Test
+
+description: Test
+
+runs:
+  using: composite
+
+  steps:
+    - name: Build
+      shell: bash
+      run: npx nx run-many --target=build --all --parallel --max-parallel=3
+    - name: Test
+      shell: bash
+      run: npx nx run-many --target=test --all --parallel --max-parallel=2
+    - name: Lint
+      shell: bash
+      run: npx nx run-many --target=lint --all --parallel --max-parallel=2
