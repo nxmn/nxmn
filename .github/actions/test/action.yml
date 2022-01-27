@@ -1,0 +1,50 @@
+name: Test
+
+description: Test
+
+runs:
+  using: composite
+
+  steps:
+    - env:
+        NX_CLOUD_DISTRIBUTED_EXECUTION: true
+
+    - name: Commitlint
+      shell: bash
+      run: npx commitlint --from=last-release
+
+    - name: Derive appropriate SHAs for base and head for `nx affected` commands
+      uses: nrwl/nx-set-shas@v2
+
+    - name: Start Nx Cloud
+      shell: bash
+      run: npx nx-cloud start-ci-run
+
+    - name: Build
+      shell: bash
+      run: npx nx affected --target=build --parallel --max-parallel=3
+
+    - name: Test
+      shell: bash
+      run: npx nx affected --target=test --parallel --max-parallel=2
+
+    - name: Lint
+      shell: bash
+      run: npx nx affected --target=lint --parallel --max-parallel=2
+
+    - name: Stop Nx Cloud
+      shell: bash
+      run: npx nx-cloud stop-all-agents
+
+    agents:
+      runs-on: ubuntu-latest
+      name: Agent 1
+      timeout-minutes: 60
+      strategy:
+        matrix:
+          agent: [1, 2, 3]
+      steps:
+        - name: Setup
+          uses: ./.github/actions/setup
+        - name: Start Nx Agent ${{ matrix.agent }}
+          run: npx nx-cloud start-agent
