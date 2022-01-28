@@ -1,11 +1,14 @@
 name: CI
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   test:
+    name: CI with Node.js ${{ matrix.node_version }}
     runs-on: ubuntu-latest
 
     strategy:
