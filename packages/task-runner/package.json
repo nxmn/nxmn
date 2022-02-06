@@ -4,7 +4,6 @@
   "dependencies": {
     "axios": "^0.25.0",
     "form-data": "^4.0.0",
-    "nx-remotecache-custom": "^1.0.0",
-    "tslib": "^2.3.1"
+    "nx-remotecache-custom": "^1.0.0"
   }
 }

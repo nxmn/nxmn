@@ -49,7 +49,7 @@
           "mkdir -p ./dist/containers/cache-server",
           "cp -R ./dist/packages/cache-server ./dist/containers/cache-server/output",
           "cp ./packages/cache-server/Containerfile ./dist/containers/cache-server/Containerfile",
-          "cd ./dist/containers/cache-server && podman build -f Containerfile -t cache-server:latest ."
+          "cd ./dist/containers/cache-server && docker build -f Containerfile -t cache-server:latest ."
         ],
         "parallel": false
       },
