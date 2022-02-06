@@ -44,7 +44,7 @@ export class CacheController {
   }
 
   private doesCacheExist(cache: string): boolean {
-    return existsSync(join(this.configService.cacheDir, cache));
+    return existsSync(this.getCachePath(cache));
   }
 
   private getCachePath(cache: string): string {
