@@ -34,7 +34,7 @@ export const taskRunner = createCustomRunner<{ url: string }>(
       },
       storeFile: async (filename, buffer) => {
         const form = new FormData();
-        form.append('file', Buffer.from(buffer), filename);
+        form.append('cache', Buffer.from(buffer), filename);
         return axios.post(`${options.url}/cache`, form, {
           headers: form.getHeaders(),
         });
