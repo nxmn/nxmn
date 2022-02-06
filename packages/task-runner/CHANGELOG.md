@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.1](https://github.com/nxmn/nxmn/compare/task-runner-0.3.0...task-runner-0.3.1) (2022-02-06)
+
+
+### Bug Fixes
+
+* dummy commit to trigger publish ([023822e](https://github.com/nxmn/nxmn/commit/023822e61e763d71493521f9603d97a96aca3f88))
+
+
+
 # [0.3.0](https://github.com/nxmn/nxmn/compare/task-runner-0.2.4...task-runner-0.3.0) (2022-02-06)
 
 
