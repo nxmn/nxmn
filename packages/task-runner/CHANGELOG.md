@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.3.0](https://github.com/nxmn/nxmn/compare/task-runner-0.2.4...task-runner-0.3.0) (2022-02-06)
+
+
+### Features
+
+* setup TLS support (self signed certs included) ([93f94e9](https://github.com/nxmn/nxmn/commit/93f94e9bbb68d5b3cb28e155d30588f28be51d91))
+
+
+
 ## [0.2.4](https://github.com/nxmn/nxmn/compare/task-runner-0.2.3...task-runner-0.2.4) (2022-02-06)
 
 
