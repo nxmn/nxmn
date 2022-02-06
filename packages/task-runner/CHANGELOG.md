@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.2](https://github.com/nxmn/nxmn/compare/task-runner-0.2.1...task-runner-0.2.2) (2022-02-06)
+
+
+### Bug Fixes
+
+* add correct FormData import ([a7f22ea](https://github.com/nxmn/nxmn/commit/a7f22ea19bc41a87a86a93f6f793f1b3cd2f9d46))
+
+
+
 ## [0.2.1](https://github.com/nxmn/nxmn/compare/task-runner-0.2.0...task-runner-0.2.1) (2022-02-06)
 
 
