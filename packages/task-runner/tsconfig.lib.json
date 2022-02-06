@@ -4,7 +4,9 @@
     "allowSyntheticDefaultImports": true,
     "outDir": "../../dist/out-tsc",
     "declaration": true,
-    "types": []
+    "types": [],
+    "module": "commonjs",
+    "target": "es2020"
   },
   "include": ["**/*.ts"],
   "exclude": ["**/*.spec.ts"]
