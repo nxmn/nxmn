@@ -1,5 +1,5 @@
 import axios from 'axios';
-import FormData from 'form-data';
+import * as FormData from 'form-data';
 import { createCustomRunner } from 'nx-remotecache-custom';
 import { Stream } from 'stream';
 
