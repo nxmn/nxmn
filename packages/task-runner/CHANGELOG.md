@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.3](https://github.com/nxmn/nxmn/compare/task-runner-0.2.2...task-runner-0.2.3) (2022-02-06)
+
+
+### Bug Fixes
+
+* use correct cache server endpoint ([3785c58](https://github.com/nxmn/nxmn/commit/3785c58f9ce2fb3602778a8fbdf272041d318bd2))
+
+
+
 ## [0.2.2](https://github.com/nxmn/nxmn/compare/task-runner-0.2.1...task-runner-0.2.2) (2022-02-06)
 
 
