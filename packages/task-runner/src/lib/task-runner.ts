@@ -20,25 +20,22 @@ export const taskRunner = createCustomRunner<{ url: string }>(
       name: 'NXMN Task Runner',
       fileExists: async (filename) => {
         try {
-          const response = await axios.head(
-            `${options.url}/api/file/${filename}`
-          );
+          const response = await axios.head(`${options.url}/cache/${filename}`);
           return response.status === 200;
         } catch (e) {
           return false;
         }
       },
       retrieveFile: async (filename) => {
-        const response = await axios.get(
-          `${options.url}/api/file/${filename}`,
-          { responseType: 'stream' }
-        );
+        const response = await axios.get(`${options.url}/cache/${filename}`, {
+          responseType: 'stream',
+        });
         return streamToBuffer(response.data);
       },
       storeFile: async (filename, buffer) => {
         const form = new FormData();
         form.append('file', Buffer.from(buffer), filename);
-        return axios.post(`${options.url}/api/file`, form, {
+        return axios.post(`${options.url}/cache`, form, {
           headers: form.getHeaders(),
         });
       },
