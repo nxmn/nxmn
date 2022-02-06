@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.1](https://github.com/nxmn/nxmn/compare/cache-server-0.2.0...cache-server-0.2.1) (2022-02-06)
+
+
+### Bug Fixes
+
+* **cache-sever:** set cache directory correctly ([88110b8](https://github.com/nxmn/nxmn/commit/88110b8b2baf9462df6a67553e82dfa13df41add))
+
+
+
 # [0.2.0](https://github.com/nxmn/nxmn/compare/cache-server-0.1.0...cache-server-0.2.0) (2022-02-06)
 
 
