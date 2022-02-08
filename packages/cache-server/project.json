@@ -3,12 +3,12 @@
   "sourceRoot": "packages/cache-server/src",
   "projectType": "application",
   "targets": {
-    "build": {
-      "executor": "@nrwl/node:build",
+    "build-base": {
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/cache-server",
-        "main": "packages/cache-server/src/main.ts",
+        "main": "packages/cache-server/bin/cache-server.ts",
         "tsConfig": "packages/cache-server/tsconfig.app.json",
         "generatePackageJson": true
       },
@@ -19,6 +19,23 @@
           "inspect": false
         }
       }
+    },
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["dist/packages/cache-server"],
+      "options": {
+        "commands": [
+          "chmod +x dist/packages/cache-server/bin/cache-server.js"
+        ],
+        "parallel": false
+      },
+      "dependsOn": [
+        {
+          "target": "build-base",
+          "configurations": ["production"],
+          "projects": "self"
+        }
+      ]
     },
     "serve": {
       "executor": "@nrwl/node:execute",
