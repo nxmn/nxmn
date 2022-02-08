@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.3.0](https://github.com/nxmn/nxmn/compare/cache-server-0.2.1...cache-server-0.3.0) (2022-02-08)
+
+
+### Features
+
+* **cache-server:** expose bin ([0320d64](https://github.com/nxmn/nxmn/commit/0320d64f62e1577cda64b6653e3486e668730800))
+
+
+
 ## [0.2.1](https://github.com/nxmn/nxmn/compare/cache-server-0.2.0...cache-server-0.2.1) (2022-02-06)
 
 
