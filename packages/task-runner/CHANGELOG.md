@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.4.0](https://github.com/nxmn/nxmn/compare/task-runner-0.3.1...task-runner-0.4.0) (2022-02-10)
+
+
+### Features
+
+* allow to set maxContentLength and maxBodyLength ([574696e](https://github.com/nxmn/nxmn/commit/574696ec002963cfb2b6e26569522bfaccb5d305))
+
+
+
 ## [0.3.1](https://github.com/nxmn/nxmn/compare/task-runner-0.3.0...task-runner-0.3.1) (2022-02-06)
 
 ### Bug Fixes
