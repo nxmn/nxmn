@@ -24,9 +24,7 @@
       "executor": "@nrwl/workspace:run-commands",
       "outputs": ["dist/packages/cache-server"],
       "options": {
-        "commands": [
-          "chmod +x dist/packages/cache-server/bin/cache-server.js"
-        ],
+        "commands": ["chmod +x dist/packages/cache-server/bin/cache-server.js"],
         "parallel": false
       },
       "dependsOn": [
