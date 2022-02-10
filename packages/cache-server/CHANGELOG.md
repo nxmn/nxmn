@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.4.0](https://github.com/nxmn/nxmn/compare/cache-server-0.3.0...cache-server-0.4.0) (2022-02-10)
+
+
+### Features
+
+* allow to set maxContentLength and maxBodyLength ([574696e](https://github.com/nxmn/nxmn/commit/574696ec002963cfb2b6e26569522bfaccb5d305))
+
+
+
 # [0.3.0](https://github.com/nxmn/nxmn/compare/cache-server-0.2.1...cache-server-0.3.0) (2022-02-08)
 
 
