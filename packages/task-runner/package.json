@@ -1,7 +1,7 @@
 {
   "name": "@nxmn/task-runner",
   "version": "0.4.0",
-  "dependencies": {
+  "peerDependencies": {
     "axios": "^0.25.0",
     "form-data": "^4.0.0",
     "nx-remotecache-custom": "^1.0.0"
