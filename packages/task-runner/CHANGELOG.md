@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.1](https://github.com/nxmn/nxmn/compare/task-runner-0.4.0...task-runner-0.4.1) (2022-02-19)
+
+
+### Bug Fixes
+
+* **task-runner:** change dependencies to peerDependencies ([171d66e](https://github.com/nxmn/nxmn/commit/171d66e56ebea22c2d3e8d480533445b5bfa2563))
+
+
+
 # [0.4.0](https://github.com/nxmn/nxmn/compare/task-runner-0.3.1...task-runner-0.4.0) (2022-02-10)
 
 
