@@ -1,9 +1,6 @@
 {
   "name": "@nxmn/cache-server",
   "version": "0.4.3",
-  "bin": {
-    "nxmn-cache-server": "./bin/cache-server.js"
-  },
   "dependencies": {
     "@nestjs/common": "8.3.1",
     "@nestjs/core": "8.3.1",
