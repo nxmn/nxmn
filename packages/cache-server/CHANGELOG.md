@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.4](https://github.com/nxmn/nxmn/compare/cache-server-0.4.3...cache-server-0.4.4) (2022-02-21)
+
+
+### Bug Fixes
+
+* **cache-sever:** setup docker image build and push ([ff3bebc](https://github.com/nxmn/nxmn/commit/ff3bebcf241b0faca73203e7be0ecee033eca225))
+
+
+
 ## [0.4.3](https://github.com/nxmn/nxmn/compare/cache-server-0.4.2...cache-server-0.4.3) (2022-02-20)
 
 

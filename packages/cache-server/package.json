@@ -1,6 +1,6 @@
 {
   "name": "@nxmn/cache-server",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "dependencies": {
     "@nestjs/common": "8.3.1",
     "@nestjs/core": "8.3.1",
