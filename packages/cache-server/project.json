@@ -3,7 +3,7 @@
   "sourceRoot": "packages/cache-server/src",
   "projectType": "application",
   "targets": {
-    "build-base": {
+    "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
@@ -19,21 +19,6 @@
           "inspect": false
         }
       }
-    },
-    "build": {
-      "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["dist/packages/cache-server"],
-      "options": {
-        "commands": ["chmod +x dist/packages/cache-server/bin/cache-server.js"],
-        "parallel": false
-      },
-      "dependsOn": [
-        {
-          "target": "build-base",
-          "configurations": ["production"],
-          "projects": "self"
-        }
-      ]
     },
     "serve": {
       "executor": "@nrwl/node:execute",
@@ -56,15 +41,15 @@
         "passWithNoTests": true
       }
     },
-    "create-container": {
+    "build-image": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "commands": [
           "rm -rf ./dist/containers/cache-server",
           "mkdir -p ./dist/containers/cache-server",
           "cp -R ./dist/packages/cache-server ./dist/containers/cache-server/output",
-          "cp ./packages/cache-server/Containerfile ./dist/containers/cache-server/Containerfile",
-          "cd ./dist/containers/cache-server && docker build -f Containerfile -t cache-server:latest ."
+          "cp ./packages/cache-server/Dockerfile ./dist/containers/cache-server/Dockerfile",
+          "cd ./dist/containers/cache-server && docker build -t minijus/nxmn-cache-server:latest ."
         ],
         "parallel": false
       },
@@ -82,7 +67,7 @@
         "baseBranch": "main",
         "push": true,
         "noVerify": true,
-        "postTargets": ["cache-server:publish", "cache-server:github"],
+        "postTargets": ["cache-server:publish", "cache-server:github", "cache-server:push-image"],
         "commitMessageFormat": "chore(${projectName}): release version ${version}"
       }
     },
@@ -98,6 +83,20 @@
       "options": {
         "access": "public"
       }
+    },
+    "push-image": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["docker push minijus/nxmn-cache-server:latest"],
+        "parallel": false
+      },
+      "dependsOn": [
+        {
+          "target": "build-image",
+          "configurations": ["production"],
+          "projects": "self"
+        }
+      ]
     }
   },
   "tags": []
