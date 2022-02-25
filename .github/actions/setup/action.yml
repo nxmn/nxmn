@@ -21,7 +21,7 @@ runs:
       run: git config user.email "-" && git config user.name "Bot"
 
     - name: Use Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         cache: npm
         node-version: ${{ inputs.node_version }}
