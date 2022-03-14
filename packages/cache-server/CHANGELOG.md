@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.6](https://github.com/nxmn/nxmn/compare/cache-server-0.4.5...cache-server-0.4.6) (2022-03-14)
+
+
+### Bug Fixes
+
+* **deps:** update nest monorepo to v8.4.1 ([d2580c5](https://github.com/nxmn/nxmn/commit/d2580c50ce0bb0423c3c60789adc87996e0fc900))
+
+
+
 ## [0.4.5](https://github.com/nxmn/nxmn/compare/cache-server-0.4.4...cache-server-0.4.5) (2022-03-01)
 
 
