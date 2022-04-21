@@ -1,10 +1,10 @@
-FROM node:16-alpine3.15 as builder
+FROM node:18-alpine3.15 as builder
 
 WORKDIR /app
 COPY ./output .
 RUN npm install --production --no-audit --no-progress
 
-FROM node:16-alpine3.15 as cache-server
+FROM node:18-alpine3.15 as cache-server
 
 WORKDIR /app
 COPY --from=builder /app .
