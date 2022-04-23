@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.5.0](https://github.com/nxmn/nxmn/compare/cache-server-0.4.8...cache-server-0.5.0) (2022-04-23)
+
+
+### Features
+
+* **deps:** update nrwl monorepo to v14 ([8c30583](https://github.com/nxmn/nxmn/commit/8c305837ecf94d056c6ae461e8f371d02d9d7c7d))
+
+
+
 ## [0.4.8](https://github.com/nxmn/nxmn/compare/cache-server-0.4.7...cache-server-0.4.8) (2022-04-07)
 
 
