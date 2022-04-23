@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/task-runner"],
       "options": {
-        "jestConfig": "packages/task-runner/jest.config.js",
+        "jestConfig": "packages/task-runner/jest.config.ts",
         "passWithNoTests": true
       }
     },

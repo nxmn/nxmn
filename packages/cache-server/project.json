@@ -37,7 +37,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/cache-server"],
       "options": {
-        "jestConfig": "packages/cache-server/jest.config.js",
+        "jestConfig": "packages/cache-server/jest.config.ts",
         "passWithNoTests": true
       }
     },
