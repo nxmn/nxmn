@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.1](https://github.com/nxmn/nxmn/compare/cache-server-0.5.0...cache-server-0.5.1) (2022-04-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tslib to v2.4.0 ([f291afc](https://github.com/nxmn/nxmn/commit/f291afc7aa6a74bfb5f3df33b89cbb01a91d6b80))
+
+
+
 # [0.5.0](https://github.com/nxmn/nxmn/compare/cache-server-0.4.8...cache-server-0.5.0) (2022-04-23)
 
 
