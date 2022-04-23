@@ -16,6 +16,20 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 
 
+# [0.5.0](https://github.com/nxmn/nxmn/compare/task-runner-0.4.0...task-runner-0.5.0) (2022-04-23)
+
+
+### Bug Fixes
+
+* **task-runner:** change dependencies to peerDependencies ([171d66e](https://github.com/nxmn/nxmn/commit/171d66e56ebea22c2d3e8d480533445b5bfa2563))
+
+
+### Features
+
+* **deps:** update nrwl monorepo to v14 ([8c30583](https://github.com/nxmn/nxmn/commit/8c305837ecf94d056c6ae461e8f371d02d9d7c7d))
+
+
+
 ## [0.4.1](https://github.com/nxmn/nxmn/compare/task-runner-0.4.0...task-runner-0.4.1) (2022-04-07)
 
 
