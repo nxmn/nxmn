@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.3](https://github.com/nxmn/nxmn/compare/cache-server-0.5.2...cache-server-0.5.3) (2022-04-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency express to v4.18.1 ([fce5ee6](https://github.com/nxmn/nxmn/commit/fce5ee6e90b047fdf4abcc01df0732ba75860218))
+
+
+
 ## [0.5.2](https://github.com/nxmn/nxmn/compare/cache-server-0.5.1...cache-server-0.5.2) (2022-04-29)
 
 
